@@ -25,10 +25,10 @@ while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
-    <td><?php echo $Result['name'];?></div></td>
-    <td><?php echo $Result['comment'];?></td>
-    <td><?php echo $Result['link'];?></td>
-    <td>
+    <td style="background-color: #ffffff;"><?php echo $Result['name'];?></div></td>
+    <td style="background-color: #ffffff;"><?php echo $Result['comment'];?></td>
+    <td style="background-color: #ffffff;"><?php echo $Result['link'];?></td>
+    <td style="background-color: #ffffff;">
         <a href="delete.php" class="btn btn-info">delete</a>
         <a href="edit.php" class="btn btn-info">edit</a>
     </td>
