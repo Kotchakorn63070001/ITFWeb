@@ -2,7 +2,7 @@
 <head>
 <title>ITF Lab</title>
 </head>
-<body style="background-color:#9DD3F3;">
+<body style="background-color: rgb(180, 255, 239);"> 
 <?php
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'kotchakorn.mysql.database.azure.com', 'kotchakorn@kotchakorn', 'JLRhlq32', 'itflab', 3306);
@@ -12,9 +12,9 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<table width="600" class="text-center" border="1">
+<table width="600"  style="background-color:#F6F6AD" border="1">
   <tr>
-    <th width="100"> <div align="center">name</div></th>
+    <th width="100"><div align="center">name</div></th>
     <th width="350"> <div align="center">comment </div></th>
     <th width="150"> <div align="center">link </div></th>
   </tr>
