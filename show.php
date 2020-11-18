@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>ITF Lab</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body style="background-color: rgb(180, 255, 239);"> 
 <?php
@@ -12,11 +13,12 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<table width="600"  style="background-color:#F6F6AD" border="1">
+<table width="750" border="1">
   <tr>
-    <th width="100"><div align="center">name</div></th>
-    <th width="350"> <div align="center">comment </div></th>
-    <th width="150"> <div align="center">link </div></th>
+    <th width="100" style="background-color: #F0F0B8;"><div align="center">name</div></th>
+    <th width="350" style="background-color: #F0F0C8;"> <div align="center">comment </div></th>
+    <th width="150" style="background-color: #F0F0B8;"> <div align="center">link </div></th>
+    <tr width="150" style="background-color: #F0F0C8;"> <div align="center">action </div></th>
   </tr>
 <?php
 while($Result = mysqli_fetch_array($res))
@@ -26,6 +28,10 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['name'];?></div></td>
     <td><?php echo $Result['comment'];?></td>
     <td><?php echo $Result['link'];?></td>
+    <td>
+        <a href="delete.php" class="btn btn-info">delete</a>
+        <a href="edit.php" class="btn btn-info">edit</a>
+    </td>
   </tr>
 <?php
 }
