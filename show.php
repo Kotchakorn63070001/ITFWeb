@@ -2,7 +2,7 @@
 <head>
 <title>ITF Lab</title>
 </head>
-<body>
+<body style="background-color:#9DD3F3;">
 <?php
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'kotchakorn.mysql.database.azure.com', 'kotchakorn@kotchakorn', 'JLRhlq32', 'itflab', 3306);
