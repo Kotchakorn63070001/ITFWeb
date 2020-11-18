@@ -13,33 +13,40 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<table width="750" border="1">
-  <tr>
-    <th width="100" style="background-color: #F0F0B8;"><div align="center">name</div></th>
-    <th width="350" style="background-color: #F0F0C8;"> <div align="center">comment </div></th>
-    <th width="150" style="background-color: #F0F0B8;"> <div align="center">link </div></th>
-    <th width="150" style="background-color: #F0F0C8;"> <div align="center">action </div></th>
-  </tr>
-<?php
-while($Result = mysqli_fetch_array($res))
-{
-?>
-  <tr>
-    <td style="background-color: #ffffff;"><?php echo $Result['name'];?></div></td>
-    <td style="background-color: #ffffff;"><?php echo $Result['comment'];?></td>
-    <td style="background-color: #ffffff;"><?php echo $Result['link'];?></td>
-    <td style="background-color: #ffffff;">
-        <a href="delete.php" class="btn btn-info">delete</a>
-        <a href="edit.php" class="btn btn-info">edit</a>
-    </td>
-  </tr>
-<?php
-}
-?>
-</table>
-<div>
-    <a href="form.html" class="btn btn-info">add</a>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <table width="100%" border="1">
+                <tr>
+                  <th width="100" style="background-color: #F0F0B8;"><div align="center">name</div></th>
+                  <th width="350" style="background-color: #F0F0C8;"> <div align="center">comment </div></th>
+                  <th width="150" style="background-color: #F0F0B8;"> <div align="center">link </div></th>
+                  <th width="150" style="background-color: #F0F0C8;"> <div align="center">action </div></th>
+                </tr>
+              <?php
+              while($Result = mysqli_fetch_array($res))
+              {
+              ?>
+                <tr>
+                  <td style="background-color: #ffffff;"><?php echo $Result['name'];?></div></td>
+                  <td style="background-color: #ffffff;"><?php echo $Result['comment'];?></td>
+                  <td style="background-color: #ffffff;"><?php echo $Result['link'];?></td>
+                  <td style="background-color: #ffffff;">
+                      <a href="delete.php" class="btn btn-info">delete</a>
+                      <a href="edit.php" class="btn btn-info">edit</a>
+                  </td>
+                </tr>
+              <?php
+              }
+              ?>
+              </table>
+              
+            <a href="form.html" class="btn btn-info">add</a>
+        </div>
+    </div>
+
 </div>
+
 
 <?php
 mysqli_close($conn);
