@@ -32,8 +32,8 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
                   <td style="background-color: #ffffff;"><?php echo $Result['comment'];?></td>
                   <td style="background-color: #ffffff;"><?php echo $Result['link'];?></td>
                   <td style="background-color: #ffffff;">
-                      <a href="delete.php" class="btn btn-info">delete</a>
-                      <a href="edit.php" class="btn btn-info">edit</a>
+                      <a href="delete.php?id=<?=$Result['id'];?>" class="btn btn-info">delete</a>
+                      <a href="edit.php?id=<?=$Result['id'];?>" class="btn btn-info">edit</a>
                   </td>
                 </tr>
               <?php
