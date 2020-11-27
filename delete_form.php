@@ -8,7 +8,7 @@ if (mysqli_connect_errno($conn))
 
 $Id = $_GET['Id'];
 
-$sql = "DELETE FROM price WHERE Id = $Id";
+$sql = "DELETE FROM price WHERE id = $Id";
 
 
 if (mysqli_query($conn, $sql)) {
