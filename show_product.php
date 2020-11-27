@@ -34,7 +34,7 @@ $res = mysqli_query($conn, 'SELECT * FROM price');
                   <td style="background-color: #ffffff;"><?php echo $Result['Amount'];?></td>
                   <td style="background-color: #ffffff;"><?php echo $Result['Total'];?></td>
                   <td style="background-color: #ffffff;">
-                      <a href="delete.php?id=<?=$Result['id'];?>" class="btn btn-info">delete</a>
+                      <a href="delete_product.php?id=<?=$Result['id'];?>" class="btn btn-info">delete</a>
                   </td>
                 </tr>
               <?php
