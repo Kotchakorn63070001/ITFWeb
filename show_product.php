@@ -32,7 +32,7 @@ $res = mysqli_query($conn, 'SELECT * FROM price');
                   <td style="background-color: #ffffff;"><?php echo $Result['Product'];?></div></td>
                   <td style="background-color: #ffffff;"><?php echo $Result['Price'];?></td>
                   <td style="background-color: #ffffff;"><?php echo $Result['Amount'];?></td>
-                  <td style="background-color: #ffffff;"><?php echo $Result['Price*Amount'];?></td>
+                  <td style="background-color: #ffffff;"><?php echo $Result['Total'];?></td>
                   <td style="background-color: #ffffff;">
                       <a href="delete.php?id=<?=$Result['id'];?>" class="btn btn-info">delete</a>
                   </td>
