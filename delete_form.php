@@ -6,9 +6,9 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-$id = $_GET['id'];
+$Id = $_GET['Id'];
 
-$sql = "DELETE FROM price WHERE id = $id";
+$sql = "DELETE FROM price WHERE Id = $Id";
 
 
 if (mysqli_query($conn, $sql)) {
